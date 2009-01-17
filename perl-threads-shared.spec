@@ -24,6 +24,8 @@ BuildRequires: perl(strict)
 BuildRequires: perl(threads)
 BuildRequires: perl(warnings)
 
+Provides: perl(threads::shared)
+
 
 
 %description
