@@ -1,6 +1,6 @@
 
 %define realname   threads-shared
-%define version    1.27
+%define version    1.28
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
