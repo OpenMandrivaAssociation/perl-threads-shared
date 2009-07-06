@@ -1,17 +1,16 @@
+%define upstream_name    threads-shared
+%define upstream_version 1.29
 
-%define realname   threads-shared
-%define version    1.28
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Perl extension for sharing data structures between threads
-Source:     http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
 BuildRequires: perl(Carp)
 BuildRequires: perl(Config)
@@ -22,11 +21,8 @@ BuildRequires: perl(Test::More)
 BuildRequires: perl(XSLoader)
 BuildRequires: perl(strict)
 BuildRequires: perl(threads)
-BuildRequires: perl(warnings)
-
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 Provides: perl(threads::shared)
-
-
 
 %description
 By default, variables are private to each thread, and each newly created
@@ -40,7 +36,7 @@ and scalar refs, arrays and array refs, and hashes and hash refs.
 
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -61,5 +57,4 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
