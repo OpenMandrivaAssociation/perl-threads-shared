@@ -1,5 +1,5 @@
 %define upstream_name    threads-shared
-%define upstream_version 1.29
+%define upstream_version 1.31
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -33,8 +33,6 @@ Win32). It is used together with the the threads manpage module.
 This module supports the sharing of the following data types only: scalars
 and scalar refs, arrays and array refs, and hashes and hash refs.
 
-
-
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version} 
 
@@ -57,4 +55,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
