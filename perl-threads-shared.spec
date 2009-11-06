@@ -1,9 +1,9 @@
 %define upstream_name    threads-shared
-%define upstream_version 1.31
+%define upstream_version 1.32
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    Perl extension for sharing data structures between threads
 License:    GPL+ or Artistic
