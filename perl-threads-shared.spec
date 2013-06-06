@@ -1,15 +1,14 @@
 %define upstream_name    threads-shared
-%define upstream_version 1.36
-
+%define upstream_version 1.43
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Version:    %perl_convert_version 1.43
+Release:	1
 
 Summary:    Perl extension for sharing data structures between threads
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://search.cpan.org/CPAN/authors/id/J/JD/JDHEDDEN/threads-shared-1.43.tar.gz
 
 BuildRequires: perl-devel
 BuildRequires: perl(Carp)
@@ -120,4 +119,5 @@ rm -rf %buildroot
 
 * Sat Jan 17 2009 cpan2dist 1.27-1mdv
 - initial mdv release, generated with cpan2dist
+
 
