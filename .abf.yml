@@ -1,5 +1,6 @@
 removed_sources:
   threads-shared-1.36.tar.gz: c6bf411924e0f55670b360845c6d6015645585d9
   threads-shared-1.43.tar.gz: 3388565816b83a6f40685a57acdd57fd34300d16
-sources:
   threads-shared-1.45.tar.gz: 4f4d05a1c5f78719a7ead816aaaed1f98ed2ed4e
+sources:
+  threads-shared-1.46.tar.gz: 8221eabcd448e7c6b096918de8b141cc2a974d32

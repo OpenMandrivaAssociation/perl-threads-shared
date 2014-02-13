@@ -1,5 +1,5 @@
 %define upstream_name    threads-shared
-%define upstream_version 1.45
+%define upstream_version 1.46
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:	1
@@ -115,6 +115,7 @@ make test
 
 * Sat Jan 17 2009 cpan2dist 1.27-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
 
