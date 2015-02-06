@@ -2,7 +2,7 @@
 %define upstream_version 1.46
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:    Perl extension for sharing data structures between threads
 License:    GPL+ or Artistic
